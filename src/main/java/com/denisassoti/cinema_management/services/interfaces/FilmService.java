@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.denisassoti.cinema_management.repositories;
+package com.denisassoti.cinema_management.services.interfaces;
 
 import com.denisassoti.cinema_management.entities.Film;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import java.util.List;
 
 /**
  *
  * @author Denis ASSOTI
  */
-
-@Repository
-public interface FilmRepository extends JpaRepository<Film, Long>{
-    
+public interface FilmService {
+    List<Film> getAllFilms();
+    void saveFilm(Film film);
+    Film getFilmById(Long id);
+    void deleteFilmById(Long id);
 }

@@ -5,10 +5,16 @@
  */
 package com.denisassoti.cinema_management.repositories;
 
+import com.denisassoti.cinema_management.entities.Ville;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 /**
  *
  * @author Denis ASSOTI
  */
-public interface VilleRepository {
+
+@Repository
+public interface VilleRepository extends JpaRepository<Ville, Long>{
     
 }

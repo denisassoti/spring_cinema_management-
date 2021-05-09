@@ -5,10 +5,16 @@
  */
 package com.denisassoti.cinema_management.repositories;
 
+import com.denisassoti.cinema_management.entities.ProjectionFilm;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 /**
  *
  * @author Denis ASSOTI
  */
-public interface ProjectionRepository {
+
+@Repository
+public interface ProjectionRepository extends JpaRepository<ProjectionFilm, Long>{
     
 }

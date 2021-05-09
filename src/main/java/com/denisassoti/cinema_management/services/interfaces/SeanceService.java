@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.denisassoti.cinema_management.repositories;
+package com.denisassoti.cinema_management.services.interfaces;
 
 import com.denisassoti.cinema_management.entities.Seance;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import java.util.List;
 
 /**
  *
  * @author Denis ASSOTI
  */
-
-@Repository
-public interface SeanceRepository extends JpaRepository<Seance, Long>{
-    
+public interface SeanceService {
+    List<Seance> getAllSeances();
+    void saveSeance(Seance seance);
+    Seance getSeanceById(Long id);
+    void deleteSeanceById(Long id);
 }
